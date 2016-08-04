@@ -2,14 +2,20 @@
     'use strict';
 
     angular.module('app.mapaprod').
-    controller('appCtrl', ['$scope','$location','$http',
-                function($scope,$location,$http){
+    controller('appCtrl', ['$scope','$location','$http', '$route',
+                function($scope,$location,$http, $route){
 
-    	//HEADER Se utiliza para esconder el header en la landing
-		$scope.currentPath = $location.path();
 
-		//HEADER Esta variable es para parametrizar el texto de titulo
-		$scope.headerTitle = "MAPA PRODUCTIVO FEDERAL";
+    	//HEADER Inicializa header title
+    	$scope.header = {};
+    	$scope.header.title = "MAPA PRODUCTIVO FEDERAL";
+
+		//HEADER Funcion para esconder el header cuando esta en landing
+		$scope.hideHeader = function () {
+			if($location.path() == '/'){
+				return true
+			}
+		}
 
 		//Funcion general de navegacion entre views
 		$scope.goTo = function(data){

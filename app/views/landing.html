@@ -1,10 +1,10 @@
-<div style="margin-top:-70px;"><!-- Esto es para contrarrestar el margin del index.html para el header.html -->
+<div style="margin-top:-70px;" class="hidden-sm" ng-init="header.title = 'mapa productivo federal'"><!-- Esto es para contrarrestar el margin del index.html para el header.html -->
 	<header><!-- Landing Header Top -->
-		<nav class="navbar navbar-default" style="margin:0;">
-			<div class="container-fluid header-wrapper">
+		<nav class="navbar" style="margin:0;border:0;">
+			<div class="container-fluid header-wrapper" style="border-bottom-width: 1px;">
 				<div class="row">
 					<div class="col-md-3">
-						<a href="/"><img src="assets/img/logo-min-prod.png" height="50px"></a>
+						<a href="" ng-click="goTo('')"><img src="assets/img/logo-min-prod.png" height="50px"></a>
 					</div>						    
 				</div>
 			</div>
@@ -21,14 +21,14 @@
 				<div class="col-md-4 col-md-offset-2" ng-click="goTo('select')" style="bottom: 0;">
 					<button ng-mouseover="buttonDescription = 'El Mapa Productivo Federal es una plataforma que contiene información socioeconómica georreferenciada a nivel territorial y sectorial.'"
 					class="btn btn-block button-landing">
-					Mapa Productivo Federal
+					<span class="glyphicon glyphicon-map-marker glyphicon-button-custom"></span> Mapa Productivo Federal
 					</button>
 				</div>				
 				<div  class="col-md-4" ng-click="goTo('fichas')" style="bottom: 0;"
 					ng-mouseover="buttonDescription = 'En las Fichas Provinciales se realiza un análisis de la estructura productiva de cada provincia en busca de oportunidades de transformación productiva.'">
 					<button 
 					class="btn btn-block button-landing">
-					Fichas Provinciales
+					<span class="glyphicon glyphicon-file glyphicon-button-custom"></span> Fichas Provinciales
 					</button>
 				</div>	
 			</div> 
@@ -89,3 +89,50 @@
 		</div>
 	</footer><!-- Landing Footer-->
 </div>
+<div style="margin-top:-50px;" class="hidden-md hidden-lg"><!-- MOBILE ONLY -->
+	<header><!-- Landing Header Top -->
+		<nav class="navbar">
+			<div class="container-fluid header-wrapper">
+				<div class="row text-center">
+					<div class="col-sm-offset-1 col-sm-10">
+						<a href="/"><img src="assets/img/logo-min-prod.png" height="130px"></a>
+					</div>						    
+				</div>
+			</div>
+		</nav>
+	</header><!-- /Landing Header Top -->
+	<div class=""><!-- Landing Content 1-->
+		<div class="container-fluid">
+			<div class="row bg-logo-gps bg-logo-gps-mobile">
+				<div class="col-sm-12 text-center">
+					<br><br><br><br><br>
+					<img src="assets/img/logo-gps.png" height="260px">
+				</div>
+			</div> 
+			<div class="row">
+				<br>
+				<div class="col-sm-12">
+					<p class="logo-gps-slogan logo-gps-slogan-mobile">
+					Herramienta para la detección de oportunidades de transformación productiva a nivel sectorial y territorial</p>					
+				</div>
+				<div class="col-sm-10 col-sm-offset-1" ng-click="goTo('select')" style="bottom: 0;">
+					<button class="btn btn-block button-landing button-landing-mobile-up">
+						<span class="glyphicon glyphicon-map-marker glyphicon-button-custom" style="color:white;"></span> Mapa Productivo Federal
+					</button>
+				</div>				
+				<div class="col-sm-10 col-sm-offset-1" ng-click="goTo('fichas')" style="bottom: 0;">
+					<button class="btn btn-block button-landing button-landing-mobile-down">
+						<span class="glyphicon glyphicon-file glyphicon-button-custom" style="color:white;"></span> Fichas Provinciales
+					</button>
+				</div>					
+			</div>
+		</div>       
+	</div><!-- /Landing Content 1-->	
+	<footer class="footer-mobile"><!-- Footer -->
+		<div class="text-center">
+			<a href="http://www.produccion.gob.ar/institucional/secretarias/secretaria-de-transformacion-productiva/">
+				Secretaría de la Transformación Productiva
+			</a>
+		</div>
+	</footer><!-- /Footer -->
+</div><!-- /MOBILE ONLY -->
