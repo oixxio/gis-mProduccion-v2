@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<title>GPS de las economias regionales</title>
 	<link rel="stylesheet" href="assets/vendor/bootstrap-3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -9,7 +10,7 @@
 </head>
 <body ng-app="app.mapaprod" ng-controller="appCtrl">
 	<div ng-include="'app/layout/header.html'" ng-hide="hideHeader()"></div>
-	<div ng-view style="margin-top:70px;"></div>
+	<div ng-view class="view-margin"></div>
 </body>
 
 <!-- inject vendor js -->
@@ -23,11 +24,13 @@
 <script src="assets/vendor/gmaps.js"></script>
 <!-- /inject vendor js -->
 
-	<!-- inject app js -->
+<!-- inject app js -->
 <script src="app/app.js"></script>
 <script src="app/app.route.js"></script>
+<script src="app/services/database-factory.js"></script>
 <script src="app/controllers/app-controller.js"></script>
 <script src="app/controllers/landing-controller.js"></script>
+<script src="app/controllers/by-sector-controller.js"></script>
 <!-- /inject app js -->
 
 </html>

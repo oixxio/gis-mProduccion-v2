@@ -1,93 +1,13 @@
-<div class=""></div><!-- BACKGROUND COLOR -->
-<div class="">
-	<div class="container">	
+<div class="bg-gray"></div><!-- BACKGROUND COLOR -->
+<div style="margin-top:35vh;">
+	<div class="container-fluid">	
 		<div class="row">
 			<div class="col-sm-12 col-md-6 col-md-offset-3">
-				<button ng-click="to('mapa')" class="btn btn-default btn-block botonera">
-				INFORMACIÓN PROVINCIAL	
-				</button>
+				<button ng-click="goTo('porRegion')" class="btn btn-default btn-block botonera">INFORMACIÓN PROVINCIAL</button>
 			</div>
 			<div class="col-sm-12 col-md-6 col-md-offset-3">
-				<button ng-click="to('sector')" class="btn btn-default btn-block botonera">
-				INFORMACIÓN SECTORIAL
-				</button>
+				<button ng-click="goTo('porSector')" class="btn btn-default btn-block botonera">INFORMACIÓN SECTORIAL</button>
 			</div>
 		</div>
 	</div>
-</div>	
-<style>
-
-.botonera {
-    font-size: large;
-    letter-spacing: 2px;
-    border-radius: 17px;
-    margin:10px;
-    padding-top: 18px;
-    padding-bottom: 18px;
-    color: white;
-    background-color: #58595B;
-    border: none;
-    font-family: "Gotham-bold";
-}
-
-.botonera:hover {
-	background-color: #0973B9;
-	color: white;
-}
-
-
-.algo {
-    position:fixed;
-    padding:0;
-    margin:0;
-
-    top:0;
-    left:0;
-
-    width: 100%;
-    height: 100%;
-    background:#f1f2f2;
-}
-
-.vertical-center {
-  min-height: 100%;  /* Fallback for vh unit */
-  min-height: 100vh; /* You might also want to use
-                        'height' property instead.
-                        
-                        Note that for percentage values of
-                        'height' or 'min-height' properties,
-                        the 'height' of the parent element
-                        should be specified explicitly.
-  
-                        In this case the parent of '.vertical-center'
-                        is the <body> element */
-
-  /* Make it a flex container */
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; 
-  
-  /* Align the bootstrap's container vertically */
-    -webkit-box-align : center;
-  -webkit-align-items : center;
-       -moz-box-align : center;
-       -ms-flex-align : center;
-          align-items : center;
-  
-  /* In legacy web browsers such as Firefox 9
-     we need to specify the width of the flex container */
-  width: 100%;
-  
-  /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
-     hence the bootstrap's container won't be aligned to the center anymore.
-  
-     Therefore, we should use the following declarations to get it centered again */
-         -webkit-box-pack : center;
-            -moz-box-pack : center;
-            -ms-flex-pack : center;
-  -webkit-justify-content : center;
-          justify-content : center;
-}
-</style>
+</div>

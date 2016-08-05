@@ -29,6 +29,30 @@ body,h1,h2,h3,h4,h5,h6,p,b,span {
     color: #626262;
 }
 
+/*********************** GENERAL ********************************/
+
+.bg-gray {
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    background:#f1f2f2;
+}
+
+/**************** index **********************/
+.view-margin {
+    margin-top:70px;
+}
+@media(max-width:992px){
+    .view-margin {
+        margin-top: 42px;
+    }
+}
 
 /******************* header ************************/
 
@@ -47,6 +71,11 @@ header {
     text-align: center;
     font-size: medium;
     letter-spacing: 2px;
+}
+@media(max-width:992px){
+    .header-title {
+        margin-top: 0;
+    }
 }
 
 .header-right {
@@ -151,4 +180,25 @@ header {
     font-size:x-large;
     position:absolute;
     bottom:0;width:100%;margin-bottom:10px;
+}
+
+
+/***************** select *********************/
+
+.botonera {
+    font-size: large;
+    letter-spacing: 2px;
+    border-radius: 17px;
+    margin: 10px 0 10px 0;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    color: white;
+    background-color: #58595B;
+    border: none;
+    font-family: "Gotham-bold";
+}
+
+.botonera:hover {
+    background-color: #0973B9;
+    color: white;
 }
