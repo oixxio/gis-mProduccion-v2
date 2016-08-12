@@ -1,47 +1,28 @@
 <div class="bg-gray"></div><!-- BACKGROUND COLOR -->
-<div class="container" id="contenedor-primario2">
+<div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h3>Seleccione {{selectNodeStr}}</h3>
+			<h3>Seleccione {{selectedNode.depth}}</h3>
 		</div>
+    </div>
+    <div class="row">
+    	<div class="col-md-12">
+			<ul class="list-group">
+			  <li ng-show="nodePath[0]" class="list-group-item"><b style="color:#bbbbbb;">DIVISIÓN</b> {{nodePath[0]}}</li>
+			  <li ng-show="nodePath[1]" class="list-group-item"><b style="color:#bbbbbb;">SECTOR</b> {{nodePath[1]}}</li>
+			  <li ng-show="nodePath[2]" class="list-group-item"><b style="color:#bbbbbb;">RAMA</b> {{nodePath[2]}}</li>
+			  <li class="list-group-item"><b style="color:#bbbbbb;">{{selectedNode.depth | uppercase}}</b> {{hoveredName}}</li>
+			</ul>    		
+    	</div>
     </div>	
     <div class="row">
 	    <div class="col-xs-12 col-sm-12 col-md-4"
 	    	 ng-repeat="sector in sectorTree | filter:{ parentID: currentSector.nodeID }:true">
-	    	<a class="btn btn-default btn-lg btn-block boton-sector" ng-click="selectSector(sector)">
-	    		<div class="ellipsis">{{sector.nodeID}} - {{sector.nodeName}}</div>
+	    	<a class="btn btn-default btn-lg btn-block boton-sector"
+	    	   ng-click="selectSector(sector)" ng-mouseover="mouseOverSector(sector)">
+	    		<div class="ellipsis">{{sector.nodeName}}</div>
 	    		<span id="glyphicon" class="glyphicon glyphicon-menu-right pull-right" style="margin-top: -20px;"></span>
 			</a>
 		</div>
 	</div>
 </div>
-
-<style>
-
-.ellipsis{
-	width: 270px;
-	white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-weight: bold;
-} 
-
-.boton-sector{
-    background-color: #d6d6d6;
-    border: none;
-    padding: 20px 18px;
-    margin-top: 15px;
-    text-align: left;
-    font-family: "Roboto-thin"
-}
-
-.boton-sector:hover{
-	background-color: #0973B9 !important;
-	color: white !important;
-}
-
-.boton-sector:hover > #glyphicon {
-    color: white !important;
-}	
-
-</style>
